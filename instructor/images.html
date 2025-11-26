@@ -396,21 +396,22 @@
 ### Similarity-based network plots Next, we can explore how the enriched
 pathways relate to one another.<br>
 The enrichment map groups pathways that share many genes, helping us see
-broader biological themes rather than isolated pathways.</p>
+broader biological themes rather than isolated pathways. In this case,
+<code>pairwise_termsim()</code> function calculates the similarity
+between enriched KEGG pathways and produces a similarity matrix that
+quantifies their relationship. The <code>emapplot()</code>generates an
+enrichment map using the similarity matrix produced, visualising the
+enriched pathways as a network with nodes representing pathways and
+edges reflecting their similarity.</p>
 <hr>
 <h3 id="03kegg-figure-2">Figure 2</h3>
-<p><img src="../fig/03kegg-rendered-unnamed-chunk-6-1.png" style="display: block; margin: auto;" class="figure">
-To understand which genes drive these pathways, we can use a
-<code>cnetplot</code>.<br>
-This visualisation links genes to the pathways they belong to and
-highlights “hub genes” that appear in multiple pathways.</p>
-<hr>
+<figure><img src="../fig/03kegg-rendered-unnamed-chunk-6-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr>
 <h3 id="03kegg-figure-3">Figure 3</h3>
 <p><img src="../fig/03kegg-rendered-unnamed-chunk-7-1.png" style="display: block; margin: auto;" class="figure">
 ### Ridge plot We can also inspect the distribution of enrichment scores
-across pathways.<br>
-The ridgeplot shows how strongly and broadly each pathway is enriched
-across the ranked gene list.</p>
+across pathways with <code>ridgeplot()</code>. This shows how strongly
+and broadly each pathway is enriched across the ranked gene list using
+overlapping density curves. </p>
 <hr>
 <h3 id="03kegg-figure-4">Figure 4</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Image of pathway’</p>
@@ -477,8 +478,8 @@ across the ranked gene list.</p>
   "url": "melbournebioinformatics.github.io/uom-varnish/instructor/images.html",
   "identifier": "melbournebioinformatics.github.io/uom-varnish/instructor/images.html",
   "dateCreated": "2025-10-09",
-  "dateModified": "2025-11-25",
-  "datePublished": "2025-11-25"
+  "dateModified": "2025-11-26",
+  "datePublished": "2025-11-26"
 }
 
   </script><script>
