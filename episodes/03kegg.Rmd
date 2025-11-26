@@ -56,7 +56,8 @@ debasal_genelist <- sort(debasal_genelist, decreasing = TRUE)
 
 ```
 
-
+## Introduction
+The KEGG (Kyoto Encyclopedia of Genes and Genomes) database links genes to curated biological pathways, offering a powerful foundation for understanding cellular functions at a systems level and making meaningful biological interpretations. `clusterProfiler` allows us to access KEGG and apply both ORA (using `enrichKEGG` function) and GSEA (using `gseKEGG` function) to extract pathway-level insights from our RNA-seq data.
 
 ## KEGG analysis
 
@@ -72,6 +73,10 @@ search_kegg_organism(kegg_organism, by='kegg_code')
 ```
 
 ## Over-representation analysis with `enrichKEGG`
+To run ORA using KEGG database, we need to specify the gene list, KEGG organism code and p-value cut-off. In this example, we take the top 500 genes from the ranked gene list `debasal_genelist`, specify the organism code `mmu` (defined as `kegg_organism) and use 0.05 as the p-value cut-off.
+
+We can use `head()` function to briefly inspect the results of `enrichKEGG`.
+
 
 ```{r}
 
@@ -85,7 +90,7 @@ head(kk)
 ```
 
 ## GSEA-style KEGG enrichment with `gseKEGG`
-This method uses the entire ranked gene list rather than an arbitrary cutoff.
+Similar to previous enrichment analysis with GO database, we can also perform a GSEA-style enrichment using the KEGG database. To do so, we use the `gseKEGG` and specify the entire ranked gene list (`debasal_genelist`) rather than an arbitrary cutoff. In this example, we test KEGG pathways between 3 and 800 genes using 10,000 permutations and NCBI Gene IDs. Results are filtered using a p-value cut-off of 0.05.
 ```{r}
 
 
@@ -103,7 +108,7 @@ kk2 <- gseKEGG(geneList     = debasal_genelist,
 ```
 ## Visualising enriched pathways
 ### Dotplot
-Before we look at individual pathways in detail, we can visualise the overall enrichment results.  
+Before we look at individual pathways in detail, we can visualise the overall enrichment results using `dotplot()`.  
 This dotplot summarises which KEGG pathways are enriched, how many genes contribute to each pathway, and how significant each one is.
 ```{r}
 
@@ -114,6 +119,8 @@ dotplot(kk2, showCategory = 10, title = "Enriched Pathways" , split=".sign") + f
 ### Similarity-based network plots
 Next, we can explore how the enriched pathways relate to one another.  
 The enrichment map groups pathways that share many genes, helping us see broader biological themes rather than isolated pathways.
+In this case, `pairwise_termsim()` function calculates the similarity between enriched KEGG pathways and produces a similarity matrix that quantifies their relationship. The `emapplot()`generates an enrichment map using the similarity matrix produced, visualising the enriched pathways as a network with nodes representing pathways and edges reflecting their similarity.
+
 ```{r}
 
 kk3 <- pairwise_termsim(kk2)
@@ -121,8 +128,8 @@ kk3 <- pairwise_termsim(kk2)
 emapplot(kk3)
 
 ```
-To understand which genes drive these pathways, we can use a `cnetplot`.  
-This visualisation links genes to the pathways they belong to and highlights “hub genes” that appear in multiple pathways.
+
+We can also use `cnetplot()` to understand which genes drive these enriched pathways. This plot links genes to pathways they belong to and highlights genes that appear in multiple pathways.
 
 ```{r}
 
@@ -131,8 +138,7 @@ cnetplot(kk3, categorySize="pvalue")
 
 ```
 ### Ridge plot
-We can also inspect the distribution of enrichment scores across pathways.  
-The ridgeplot shows how strongly and broadly each pathway is enriched across the ranked gene list.
+We can also inspect the distribution of enrichment scores across pathways with `ridgeplot()`. This shows how strongly and broadly each pathway is enriched across the ranked gene list using overlapping density curves. 
 
 ```{r}
 
@@ -156,8 +162,9 @@ kk3@result$ID[1]
 
 ```
 
+### KEGG Pathway Diagram
 Finally, we can visualise gene expression changes directly onto a KEGG pathway diagram.  
-`pathview` highlights which components of the pathway are up- or down-regulated in your analysis.
+`pathview` highlights which components of the pathway are up- or down-regulated in your enrichment analysis.
 
 ```{r, eval=FALSE}
 
