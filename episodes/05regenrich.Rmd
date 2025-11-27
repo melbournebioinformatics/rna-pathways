@@ -95,7 +95,7 @@ Before we set up `RegEnrich` properly, we will explore the default TF list that 
 The TFs included in the package are human-only, so for mouse data we must provide our own list of mouse transcription factors.
 
 For this workshop, we will use mouse TFs from [TcoF-DB](https://tools.sschmeier.com/tcof/home/).
-You can directly download the file that we will be using from [this link](episodes/data/BrowseTF  TcoF-DB.csv).
+You can directly download the file that we will be using from [this link](episodes/data/BrowseTF_TcoF-DB.csv).
 
 The code below shows how to:
 
