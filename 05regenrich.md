@@ -23,6 +23,57 @@ exercises: 2
 
 
 
+``` error
+Error in library(edgeR): there is no package called 'edgeR'
+```
+
+``` error
+Error in library(goseq): there is no package called 'goseq'
+```
+
+``` error
+Error in library(fgsea): there is no package called 'fgsea'
+```
+
+``` error
+Error in library(EGSEA): there is no package called 'EGSEA'
+```
+
+``` error
+Error in library(clusterProfiler): there is no package called 'clusterProfiler'
+```
+
+``` error
+Error in library(org.Mm.eg.db): there is no package called 'org.Mm.eg.db'
+```
+
+``` error
+Error in library(enrichplot): there is no package called 'enrichplot'
+```
+
+``` error
+Error in library(pathview): there is no package called 'pathview'
+```
+
+``` error
+Error in library(edgeR): there is no package called 'edgeR'
+```
+
+``` error
+Error in library(impute): there is no package called 'impute'
+```
+
+``` error
+Error in library(preprocessCore): there is no package called 'preprocessCore'
+```
+
+``` error
+Error in library(RegEnrich): there is no package called 'RegEnrich'
+```
+
+``` error
+Error in library(STRINGdb): there is no package called 'STRINGdb'
+```
 
 ## Analysis with `RegEnrich`
 `RegEnrich` is used to identify potential *key regulators* (e.g. transcription factors) that may be driving the gene expression changes observed in your RNA-seq experiment.
@@ -130,24 +181,21 @@ plotRegTarExpr(object, reg = "71371")
 
 
 
-``` output
-# A tibble: 653 × 5
-   reg    negLogPDEA negLogPEnrich logFC score
- * <chr>       <dbl>         <dbl> <dbl> <dbl>
- 1 226442      10.4           41.5 -6.96  1.64
- 2 70579       10.6           39.7 -8.24  1.63
- 3 434484       8.15          51.0 -4.68  1.62
- 4 22025        8.07          49.2 -5.11  1.59
- 5 20185       11.3           33.6 -8.13  1.58
- 6 15273        7.88          47.5 -6.86  1.54
- 7 20788       10.4           34.8 -9.65  1.52
- 8 22344        9.64          38.3 -7.05  1.52
- 9 114774       9.50          37.0 -7.64  1.49
-10 21833        8.53          41.3 -6.50  1.48
-# ℹ 643 more rows
+``` error
+Error in cpm(logcounts, log = TRUE): could not find function "cpm"
 ```
 
-<img src="fig/05regenrich-rendered-unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+``` error
+Error in results_score(object): could not find function "results_score"
+```
+
+``` error
+Error: object 'res' not found
+```
+
+``` error
+Error in plotRegTarExpr(object, reg = "71371"): could not find function "plotRegTarExpr"
+```
 
 :::: spoiler
 

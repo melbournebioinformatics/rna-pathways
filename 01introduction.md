@@ -32,18 +32,99 @@ We begin by loading the required packages. Please read the following libraries:
 
 ``` r
 library(edgeR)
+```
+
+``` error
+Error in library(edgeR): there is no package called 'edgeR'
+```
+
+``` r
 library(goseq)
+```
+
+``` error
+Error in library(goseq): there is no package called 'goseq'
+```
+
+``` r
 library(fgsea)
+```
+
+``` error
+Error in library(fgsea): there is no package called 'fgsea'
+```
+
+``` r
 library(EGSEA)
+```
+
+``` error
+Error in library(EGSEA): there is no package called 'EGSEA'
+```
+
+``` r
 library(clusterProfiler)
+```
+
+``` error
+Error in library(clusterProfiler): there is no package called 'clusterProfiler'
+```
+
+``` r
 library(org.Mm.eg.db)
+```
+
+``` error
+Error in library(org.Mm.eg.db): there is no package called 'org.Mm.eg.db'
+```
+
+``` r
 library(ggplot2)
 library(enrichplot)
+```
+
+``` error
+Error in library(enrichplot): there is no package called 'enrichplot'
+```
+
+``` r
 library(pathview)
+```
+
+``` error
+Error in library(pathview): there is no package called 'pathview'
+```
+
+``` r
 library(edgeR)
+```
+
+``` error
+Error in library(edgeR): there is no package called 'edgeR'
+```
+
+``` r
 library(impute)
+```
+
+``` error
+Error in library(impute): there is no package called 'impute'
+```
+
+``` r
 library(preprocessCore)
+```
+
+``` error
+Error in library(preprocessCore): there is no package called 'preprocessCore'
+```
+
+``` r
 library(RegEnrich)
+```
+
+``` error
+Error in library(RegEnrich): there is no package called 'RegEnrich'
 ```
 ## Inspect Datasets
 
