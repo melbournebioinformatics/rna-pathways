@@ -22,51 +22,63 @@ exercises: 2
 
 
 ``` error
-Error in library(edgeR): there is no package called 'edgeR'
+Error in `library()`:
+! there is no package called 'edgeR'
 ```
 
 ``` error
-Error in library(goseq): there is no package called 'goseq'
+Error in `library()`:
+! there is no package called 'goseq'
 ```
 
 ``` error
-Error in library(fgsea): there is no package called 'fgsea'
+Error in `library()`:
+! there is no package called 'fgsea'
 ```
 
 ``` error
-Error in library(EGSEA): there is no package called 'EGSEA'
+Error in `library()`:
+! there is no package called 'EGSEA'
 ```
 
 ``` error
-Error in library(clusterProfiler): there is no package called 'clusterProfiler'
+Error in `library()`:
+! there is no package called 'clusterProfiler'
 ```
 
 ``` error
-Error in library(org.Mm.eg.db): there is no package called 'org.Mm.eg.db'
+Error in `library()`:
+! there is no package called 'org.Mm.eg.db'
 ```
 
 ``` error
-Error in library(enrichplot): there is no package called 'enrichplot'
+Error in `library()`:
+! there is no package called 'enrichplot'
 ```
 
 ``` error
-Error in library(pathview): there is no package called 'pathview'
+Error in `library()`:
+! there is no package called 'pathview'
 ```
 
 ``` error
-Error in library(edgeR): there is no package called 'edgeR'
+Error in `library()`:
+! there is no package called 'edgeR'
 ```
 
 ``` error
-Error in library(impute): there is no package called 'impute'
+Error in `library()`:
+! there is no package called 'impute'
 ```
 
 ``` error
-Error in library(preprocessCore): there is no package called 'preprocessCore'
+Error in `library()`:
+! there is no package called 'preprocessCore'
 ```
 
 ``` error
-Error in library(RegEnrich): there is no package called 'RegEnrich'
+Error in `library()`:
+! there is no package called 'RegEnrich'
 ```
 
 ## Introduction
@@ -85,7 +97,8 @@ search_kegg_organism(kegg_organism, by='kegg_code')
 ```
 
 ``` error
-Error in search_kegg_organism(kegg_organism, by = "kegg_code"): could not find function "search_kegg_organism"
+Error in `search_kegg_organism()`:
+! could not find function "search_kegg_organism"
 ```
 
 ## Over-representation analysis with `enrichKEGG`
@@ -102,7 +115,8 @@ kk <- enrichKEGG(gene         = names(debasal_genelist)[1:500],
 ```
 
 ``` error
-Error in enrichKEGG(gene = names(debasal_genelist)[1:500], organism = kegg_organism, : could not find function "enrichKEGG"
+Error in `enrichKEGG()`:
+! could not find function "enrichKEGG"
 ```
 
 ``` r
@@ -110,7 +124,8 @@ head(kk)
 ```
 
 ``` error
-Error: object 'kk' not found
+Error:
+! object 'kk' not found
 ```
 
 ## GSEA-style KEGG enrichment with `gseKEGG`
@@ -128,7 +143,8 @@ kk2 <- gseKEGG(geneList     = debasal_genelist,
 ```
 
 ``` error
-Error in gseKEGG(geneList = debasal_genelist, organism = kegg_organism, : could not find function "gseKEGG"
+Error in `gseKEGG()`:
+! could not find function "gseKEGG"
 ```
 ## Visualising enriched pathways
 ### Dotplot
@@ -140,7 +156,8 @@ dotplot(kk2, showCategory = 10, title = "Enriched Pathways" , split=".sign") + f
 ```
 
 ``` error
-Error in dotplot(kk2, showCategory = 10, title = "Enriched Pathways", : could not find function "dotplot"
+Error in `dotplot()`:
+! could not find function "dotplot"
 ```
 ### Similarity-based network plots
 Next, we can explore how the enriched pathways relate to one another.  
@@ -153,7 +170,8 @@ kk3 <- pairwise_termsim(kk2)
 ```
 
 ``` error
-Error in pairwise_termsim(kk2): could not find function "pairwise_termsim"
+Error in `pairwise_termsim()`:
+! could not find function "pairwise_termsim"
 ```
 
 ``` r
@@ -161,7 +179,8 @@ emapplot(kk3)
 ```
 
 ``` error
-Error in emapplot(kk3): could not find function "emapplot"
+Error in `emapplot()`:
+! could not find function "emapplot"
 ```
 
 We can also use `cnetplot()` to understand which genes drive these enriched pathways. This plot links genes to pathways they belong to and highlights genes that appear in multiple pathways.
@@ -172,7 +191,8 @@ cnetplot(kk3, categorySize="pvalue")
 ```
 
 ``` error
-Error in cnetplot(kk3, categorySize = "pvalue"): could not find function "cnetplot"
+Error in `cnetplot()`:
+! could not find function "cnetplot"
 ```
 ### Ridge plot
 We can also inspect the distribution of enrichment scores across pathways with `ridgeplot()`. This shows how strongly and broadly each pathway is enriched across the ranked gene list using overlapping density curves. 
@@ -183,7 +203,8 @@ ridgeplot(kk3) + labs(x = "enrichment distribution")
 ```
 
 ``` error
-Error in ridgeplot(kk3): could not find function "ridgeplot"
+Error in `ridgeplot()`:
+! could not find function "ridgeplot"
 ```
 
 
@@ -192,7 +213,8 @@ head(kk3)
 ```
 
 ``` error
-Error: object 'kk3' not found
+Error:
+! object 'kk3' not found
 ```
 
 You can see the top pathways, you can get the top pathway ID with the ID column.
@@ -205,7 +227,8 @@ kk3@result$ID[1]
 ```
 
 ``` error
-Error: object 'kk3' not found
+Error:
+! object 'kk3' not found
 ```
 
 ### KEGG Pathway Diagram

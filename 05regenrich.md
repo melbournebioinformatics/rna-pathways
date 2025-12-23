@@ -24,55 +24,68 @@ exercises: 2
 
 
 ``` error
-Error in library(edgeR): there is no package called 'edgeR'
+Error in `library()`:
+! there is no package called 'edgeR'
 ```
 
 ``` error
-Error in library(goseq): there is no package called 'goseq'
+Error in `library()`:
+! there is no package called 'goseq'
 ```
 
 ``` error
-Error in library(fgsea): there is no package called 'fgsea'
+Error in `library()`:
+! there is no package called 'fgsea'
 ```
 
 ``` error
-Error in library(EGSEA): there is no package called 'EGSEA'
+Error in `library()`:
+! there is no package called 'EGSEA'
 ```
 
 ``` error
-Error in library(clusterProfiler): there is no package called 'clusterProfiler'
+Error in `library()`:
+! there is no package called 'clusterProfiler'
 ```
 
 ``` error
-Error in library(org.Mm.eg.db): there is no package called 'org.Mm.eg.db'
+Error in `library()`:
+! there is no package called 'org.Mm.eg.db'
 ```
 
 ``` error
-Error in library(enrichplot): there is no package called 'enrichplot'
+Error in `library()`:
+! there is no package called 'enrichplot'
 ```
 
 ``` error
-Error in library(pathview): there is no package called 'pathview'
+Error in `library()`:
+! there is no package called 'pathview'
 ```
 
 ``` error
-Error in library(edgeR): there is no package called 'edgeR'
+Error in `library()`:
+! there is no package called 'edgeR'
 ```
 
 ``` error
-Error in library(impute): there is no package called 'impute'
+Error in `library()`:
+! there is no package called 'impute'
 ```
 
 ``` error
-Error in library(preprocessCore): there is no package called 'preprocessCore'
+Error in `library()`:
+! there is no package called 'preprocessCore'
 ```
 
 ``` error
-Error in library(RegEnrich): there is no package called 'RegEnrich'
+Error in `library()`:
+! there is no package called 'RegEnrich'
 ```
 
 ``` error
-Error in library(STRINGdb): there is no package called 'STRINGdb'
+Error in `library()`:
+! there is no package called 'STRINGdb'
 ```
 
 ## Analysis with `RegEnrich`
@@ -182,19 +195,23 @@ plotRegTarExpr(object, reg = "71371")
 
 
 ``` error
-Error in cpm(logcounts, log = TRUE): could not find function "cpm"
+Error in `cpm()`:
+! could not find function "cpm"
 ```
 
 ``` error
-Error in results_score(object): could not find function "results_score"
+Error in `results_score()`:
+! could not find function "results_score"
 ```
 
 ``` error
-Error: object 'res' not found
+Error:
+! object 'res' not found
 ```
 
 ``` error
-Error in plotRegTarExpr(object, reg = "71371"): could not find function "plotRegTarExpr"
+Error in `plotRegTarExpr()`:
+! could not find function "plotRegTarExpr"
 ```
 
 :::: spoiler

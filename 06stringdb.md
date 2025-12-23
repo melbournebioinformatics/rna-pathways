@@ -23,55 +23,68 @@ exercises: 2
 
 
 ``` error
-Error in library(edgeR): there is no package called 'edgeR'
+Error in `library()`:
+! there is no package called 'edgeR'
 ```
 
 ``` error
-Error in library(goseq): there is no package called 'goseq'
+Error in `library()`:
+! there is no package called 'goseq'
 ```
 
 ``` error
-Error in library(fgsea): there is no package called 'fgsea'
+Error in `library()`:
+! there is no package called 'fgsea'
 ```
 
 ``` error
-Error in library(EGSEA): there is no package called 'EGSEA'
+Error in `library()`:
+! there is no package called 'EGSEA'
 ```
 
 ``` error
-Error in library(clusterProfiler): there is no package called 'clusterProfiler'
+Error in `library()`:
+! there is no package called 'clusterProfiler'
 ```
 
 ``` error
-Error in library(org.Mm.eg.db): there is no package called 'org.Mm.eg.db'
+Error in `library()`:
+! there is no package called 'org.Mm.eg.db'
 ```
 
 ``` error
-Error in library(enrichplot): there is no package called 'enrichplot'
+Error in `library()`:
+! there is no package called 'enrichplot'
 ```
 
 ``` error
-Error in library(pathview): there is no package called 'pathview'
+Error in `library()`:
+! there is no package called 'pathview'
 ```
 
 ``` error
-Error in library(edgeR): there is no package called 'edgeR'
+Error in `library()`:
+! there is no package called 'edgeR'
 ```
 
 ``` error
-Error in library(impute): there is no package called 'impute'
+Error in `library()`:
+! there is no package called 'impute'
 ```
 
 ``` error
-Error in library(preprocessCore): there is no package called 'preprocessCore'
+Error in `library()`:
+! there is no package called 'preprocessCore'
 ```
 
 ``` error
-Error in library(RegEnrich): there is no package called 'RegEnrich'
+Error in `library()`:
+! there is no package called 'RegEnrich'
 ```
 
 ``` error
-Error in library(STRINGdb): there is no package called 'STRINGdb'
+Error in `library()`:
+! there is no package called 'STRINGdb'
 ```
 
 
@@ -95,7 +108,8 @@ string_db <- STRINGdb$new(version = "12", species = 10090, score_threshold = 400
 ```
 
 ``` error
-Error: object 'STRINGdb' not found
+Error:
+! object 'STRINGdb' not found
 ```
 
 ``` r
@@ -105,7 +119,8 @@ top200_mapped <- string_db$map(top200, "ENTREZID", removeUnmappedRows = TRUE)
 ```
 
 ``` error
-Error: object 'string_db' not found
+Error:
+! object 'string_db' not found
 ```
 
 ``` r
@@ -114,7 +129,8 @@ string_db$plot_network(top200_mapped$STRING_id)
 ```
 
 ``` error
-Error: object 'string_db' not found
+Error:
+! object 'string_db' not found
 ```
 
 ``` r
@@ -123,7 +139,8 @@ enrichment <- string_db$get_enrichment(top200_mapped$STRING_id)
 ```
 
 ``` error
-Error: object 'string_db' not found
+Error:
+! object 'string_db' not found
 ```
 
 ``` r
@@ -131,7 +148,8 @@ head(enrichment)
 ```
 
 ``` error
-Error: object 'enrichment' not found
+Error:
+! object 'enrichment' not found
 ```
 
 There are many available ways of exploring your data using the STRING database that can't be covered in one tutorial but you can learn more by reading the [vignette](https://www.bioconductor.org/packages/release/bioc/vignettes/STRINGdb/inst/doc/STRINGdb.pdf) and inspect available functions within the `STRINGdb` package by running:
@@ -142,7 +160,8 @@ STRINGdb$methods()
 ```
 
 ``` error
-Error: object 'STRINGdb' not found
+Error:
+! object 'STRINGdb' not found
 ```
 
 Read more about STRING:

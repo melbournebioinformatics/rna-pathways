@@ -45,55 +45,68 @@ In this part of the workshop, we will:
 
 
 ``` error
-Error in library(edgeR): there is no package called 'edgeR'
+Error in `library()`:
+! there is no package called 'edgeR'
 ```
 
 ``` error
-Error in library(goseq): there is no package called 'goseq'
+Error in `library()`:
+! there is no package called 'goseq'
 ```
 
 ``` error
-Error in library(fgsea): there is no package called 'fgsea'
+Error in `library()`:
+! there is no package called 'fgsea'
 ```
 
 ``` error
-Error in library(EGSEA): there is no package called 'EGSEA'
+Error in `library()`:
+! there is no package called 'EGSEA'
 ```
 
 ``` error
-Error in library(clusterProfiler): there is no package called 'clusterProfiler'
+Error in `library()`:
+! there is no package called 'clusterProfiler'
 ```
 
 ``` error
-Error in library(org.Mm.eg.db): there is no package called 'org.Mm.eg.db'
+Error in `library()`:
+! there is no package called 'org.Mm.eg.db'
 ```
 
 ``` error
-Error in library(enrichplot): there is no package called 'enrichplot'
+Error in `library()`:
+! there is no package called 'enrichplot'
 ```
 
 ``` error
-Error in library(pathview): there is no package called 'pathview'
+Error in `library()`:
+! there is no package called 'pathview'
 ```
 
 ``` error
-Error in library(edgeR): there is no package called 'edgeR'
+Error in `library()`:
+! there is no package called 'edgeR'
 ```
 
 ``` error
-Error in library(impute): there is no package called 'impute'
+Error in `library()`:
+! there is no package called 'impute'
 ```
 
 ``` error
-Error in library(preprocessCore): there is no package called 'preprocessCore'
+Error in `library()`:
+! there is no package called 'preprocessCore'
 ```
 
 ``` error
-Error in library(RegEnrich): there is no package called 'RegEnrich'
+Error in `library()`:
+! there is no package called 'RegEnrich'
 ```
 
 ``` error
-Error in library(STRINGdb): there is no package called 'STRINGdb'
+Error in `library()`:
+! there is no package called 'STRINGdb'
 ```
 
 
@@ -124,7 +137,8 @@ fgseaRes <- fgsea(pathways = Mm.H, stats = rankedgenes, minSize = 15)
 ```
 
 ``` error
-Error in fgsea(pathways = Mm.H, stats = rankedgenes, minSize = 15): could not find function "fgsea"
+Error in `fgsea()`:
+! could not find function "fgsea"
 ```
 
 ``` r
@@ -134,7 +148,8 @@ topPathwaysUp <- fgseaRes[ES > 0][head(order(pval), n=10), pathway]
 ```
 
 ``` error
-Error: object 'fgseaRes' not found
+Error:
+! object 'fgseaRes' not found
 ```
 
 ``` r
@@ -143,7 +158,8 @@ topPathwaysDown <- fgseaRes[ES < 0][head(order(pval), n=10), pathway]
 ```
 
 ``` error
-Error: object 'fgseaRes' not found
+Error:
+! object 'fgseaRes' not found
 ```
 
 ``` r
@@ -152,7 +168,8 @@ topPathways <- c(topPathwaysUp, rev(topPathwaysDown))
 ```
 
 ``` error
-Error: object 'topPathwaysUp' not found
+Error:
+! object 'topPathwaysUp' not found
 ```
 
 ``` r
@@ -162,7 +179,8 @@ plotGseaTable(Mm.H[topPathways], rankedgenes, fgseaRes,
 ```
 
 ``` error
-Error in plotGseaTable(Mm.H[topPathways], rankedgenes, fgseaRes, gseaParam = 0.5): could not find function "plotGseaTable"
+Error in `plotGseaTable()`:
+! could not find function "plotGseaTable"
 ```
 
 ``` r
@@ -172,7 +190,8 @@ plotEnrichment(Mm.H[[topPathwaysUp[1]]], rankedgenes) + labs(title = topPathways
 ```
 
 ``` error
-Error in plotEnrichment(Mm.H[[topPathwaysUp[1]]], rankedgenes): could not find function "plotEnrichment"
+Error in `plotEnrichment()`:
+! could not find function "plotEnrichment"
 ```
 
 :::::::::::::::::::::::::::::::::::: challenge

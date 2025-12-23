@@ -34,51 +34,63 @@ We first subset the `debasal` dataset to extract genes with adjusted p-value bel
 
 
 ``` error
-Error in library(edgeR): there is no package called 'edgeR'
+Error in `library()`:
+! there is no package called 'edgeR'
 ```
 
 ``` error
-Error in library(goseq): there is no package called 'goseq'
+Error in `library()`:
+! there is no package called 'goseq'
 ```
 
 ``` error
-Error in library(fgsea): there is no package called 'fgsea'
+Error in `library()`:
+! there is no package called 'fgsea'
 ```
 
 ``` error
-Error in library(EGSEA): there is no package called 'EGSEA'
+Error in `library()`:
+! there is no package called 'EGSEA'
 ```
 
 ``` error
-Error in library(clusterProfiler): there is no package called 'clusterProfiler'
+Error in `library()`:
+! there is no package called 'clusterProfiler'
 ```
 
 ``` error
-Error in library(org.Mm.eg.db): there is no package called 'org.Mm.eg.db'
+Error in `library()`:
+! there is no package called 'org.Mm.eg.db'
 ```
 
 ``` error
-Error in library(enrichplot): there is no package called 'enrichplot'
+Error in `library()`:
+! there is no package called 'enrichplot'
 ```
 
 ``` error
-Error in library(pathview): there is no package called 'pathview'
+Error in `library()`:
+! there is no package called 'pathview'
 ```
 
 ``` error
-Error in library(edgeR): there is no package called 'edgeR'
+Error in `library()`:
+! there is no package called 'edgeR'
 ```
 
 ``` error
-Error in library(impute): there is no package called 'impute'
+Error in `library()`:
+! there is no package called 'impute'
 ```
 
 ``` error
-Error in library(preprocessCore): there is no package called 'preprocessCore'
+Error in `library()`:
+! there is no package called 'preprocessCore'
 ```
 
 ``` error
-Error in library(RegEnrich): there is no package called 'RegEnrich'
+Error in `library()`:
+! there is no package called 'RegEnrich'
 ```
 
 
@@ -98,7 +110,8 @@ ego <- enrichGO(gene = gene,
 ```
 
 ``` error
-Error in enrichGO(gene = gene, OrgDb = org.Mm.eg.db, keyType = "ENTREZID", : could not find function "enrichGO"
+Error in `enrichGO()`:
+! could not find function "enrichGO"
 ```
 
 ``` r
@@ -106,7 +119,8 @@ head(ego)
 ```
 
 ``` error
-Error: object 'ego' not found
+Error:
+! object 'ego' not found
 ```
 
 We can then use `dotplot()` function to visualise the results in the form of a dot plot. From the plot below, we can see that GO term cellular component spindle, membrane microdomain and ribosome are top enriched terms.
@@ -117,7 +131,8 @@ dotplot(ego)
 ```
 
 ``` error
-Error in dotplot(ego): could not find function "dotplot"
+Error in `dotplot()`:
+! could not find function "dotplot"
 ```
 
 ::::: challenge
@@ -148,7 +163,8 @@ ego3 <- gseGO(gene          = debasal_genelist,
 ```
 
 ``` error
-Error in gseGO(gene = debasal_genelist, OrgDb = org.Mm.eg.db, keyType = "ENTREZID", : could not find function "gseGO"
+Error in `gseGO()`:
+! could not find function "gseGO"
 ```
 
 ``` r
@@ -156,7 +172,8 @@ head(ego3)
 ```
 
 ``` error
-Error: object 'ego3' not found
+Error:
+! object 'ego3' not found
 ```
 
 ``` r
@@ -164,7 +181,8 @@ dotplot(ego3)
 ```
 
 ``` error
-Error in dotplot(ego3): could not find function "dotplot"
+Error in `dotplot()`:
+! could not find function "dotplot"
 ```
 
 We can also use the `gseaplot()` function to visualise GSEA result for a specific gene set. In this example, we select the top-ranked enriched GO term (geneSetID = 1). The result-ing plot displays how genes contributing to the enrichment of this GO term are distributed in the ranked gene list. 
@@ -175,7 +193,8 @@ gseaplot(ego3, by = "all", title = ego3$Description[1], geneSetID = 1)
 ```
 
 ``` error
-Error in gseaplot(ego3, by = "all", title = ego3$Description[1], geneSetID = 1): could not find function "gseaplot"
+Error in `gseaplot()`:
+! could not find function "gseaplot"
 ```
 
 
