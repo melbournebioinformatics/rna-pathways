@@ -13,7 +13,7 @@ This workshop is largely based on the Galaxy-based workshop [RNA-seq genes to pa
 
 -	Have basic R knowledge
 
--	Completed ‘Intro to R for Biologists’ and ‘RNA-seq: From reads to counts to genes’, or equivalent
+-	Completed [Intro to R for Biologists](https://mbite.mdhs.unimelb.edu.au/intro-to-r/) and [RNA-seq: From reads to counts to genes](https://mbite.mdhs.unimelb.edu.au/rna-seq-counts-to-genes/), or equivalent
 
 ::::
 
