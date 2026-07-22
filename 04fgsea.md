@@ -76,11 +76,6 @@ Error in `library()`:
 
 ``` error
 Error in `library()`:
-! there is no package called 'ggplot2'
-```
-
-``` error
-Error in `library()`:
 ! there is no package called 'enrichplot'
 ```
 
