@@ -416,12 +416,6 @@ R.</li>
 <h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="error" tabindex="0"><code>Error in `library()`:
-! there is no package called 'ggplot2'</code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="error" tabindex="0"><code>Error in `library()`:
 ! there is no package called 'enrichplot'</code></pre>
 </div>
 <div class="codewrapper">
@@ -466,7 +460,7 @@ function) to extract pathway-level insights from our RNA-seq data.</p>
 <hr class="half-width"><p>Before running enrichment, we need to confirm the correct KEGG
 organism code for mouse (<code>mmu</code>). You can verify by
 searching:</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -489,7 +483,7 @@ specify the organism code <code>mmu</code> (defined as `kegg_organism)
 and use 0.05 as the p-value cut-off.</p>
 <p>We can use <code>head()</code> function to briefly inspect the
 results of <code>enrichKEGG</code>.</p>
-<div class="codewrapper sourceCode" id="cb16">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -503,7 +497,7 @@ results of <code>enrichKEGG</code>.</p>
 <pre class="error" tabindex="0"><code>Error in `enrichKEGG()`:
 ! could not find function "enrichKEGG"</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb18">
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -524,7 +518,7 @@ use the <code>gseKEGG</code> and specify the entire ranked gene list
 example, we test KEGG pathways between 3 and 800 genes using 10,000
 permutations and NCBI Gene IDs. Results are filtered using a p-value
 cut-off of 0.05.</p>
-<div class="codewrapper sourceCode" id="cb20">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -550,7 +544,7 @@ cut-off of 0.05.</p>
 overall enrichment results using <code>dotplot()</code>.<br>
 This dotplot summarises which KEGG pathways are enriched, how many genes
 contribute to each pathway, and how significant each one is.</p>
-<div class="codewrapper sourceCode" id="cb22">
+<div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -575,7 +569,7 @@ quantifies their relationship. The <code>emapplot()</code>generates an
 enrichment map using the similarity matrix produced, visualising the
 enriched pathways as a network with nodes representing pathways and
 edges reflecting their similarity.</p>
-<div class="codewrapper sourceCode" id="cb24">
+<div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -587,7 +581,7 @@ edges reflecting their similarity.</p>
 <pre class="error" tabindex="0"><code>Error in `pairwise_termsim()`:
 ! could not find function "pairwise_termsim"</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb26">
+<div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -602,7 +596,7 @@ edges reflecting their similarity.</p>
 <p>We can also use <code>cnetplot()</code> to understand which genes
 drive these enriched pathways. This plot links genes to pathways they
 belong to and highlights genes that appear in multiple pathways.</p>
-<div class="codewrapper sourceCode" id="cb28">
+<div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -621,7 +615,7 @@ belong to and highlights genes that appear in multiple pathways.</p>
 pathways with <code>ridgeplot()</code>. This shows how strongly and
 broadly each pathway is enriched across the ranked gene list using
 overlapping density curves. </p>
-<div class="codewrapper sourceCode" id="cb30">
+<div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -633,7 +627,7 @@ overlapping density curves. </p>
 <pre class="error" tabindex="0"><code>Error in `ridgeplot()`:
 ! could not find function "ridgeplot"</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb32">
+<div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -647,7 +641,7 @@ overlapping density curves. </p>
 </div>
 <p>You can see the top pathways, you can get the top pathway ID with the
 ID column.</p>
-<div class="codewrapper sourceCode" id="cb34">
+<div class="codewrapper sourceCode" id="cb33">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -666,7 +660,7 @@ ID column.</p>
 <p>Finally, we can visualise gene expression changes directly onto a
 KEGG pathway diagram.<br><code>pathview</code> highlights which components of the pathway are up-
 or down-regulated in your enrichment analysis.</p>
-<div class="codewrapper sourceCode" id="cb36">
+<div class="codewrapper sourceCode" id="cb35">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -735,7 +729,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors.</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a> Custom fork by <a href="https://www.melbournebioinformatics.org.au/" class="external-link">Melbourne Bioinformatics</a>.</p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.20.2" class="external-link">sandpaper (0.20.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/melbournebioinformatics/uom-varnish/tree/main" class="external-link">varnish (1.1.3)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/" class="external-link">sandpaper (0.20.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/melbournebioinformatics/uom-varnish/tree/main" class="external-link">varnish (1.1.3)</a></p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
