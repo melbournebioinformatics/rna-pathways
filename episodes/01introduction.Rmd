@@ -20,9 +20,9 @@ exercises: 2
 
 ## Introduction
 
-Sometimes, there is an extensive list of genes to interpret after differential gene expres-sion analysis, and it is not feasible to go through the biological function of each gene one at a time. A common downstream procedure is functional enrichment analysis (or gene set testing), which aims to determine which pathways or gene networks the differ-entially expressed genes are implicated in. There are many gene set testing methods available, and it is useful to try several of them.
+Sometimes, there is an extensive list of genes to interpret after differential gene expression analysis, and it is not feasible to go through the biological function of each gene one at a time. A common downstream procedure is functional enrichment analysis (or gene set testing), which aims to determine which pathways or gene networks the differentially expressed genes are implicated in. There are many gene set testing methods available, and it is useful to try several of them.
 
-The purpose of this tutorial is to demonstrate how to perform functional enrichment analysis/gene set testing using various tools/packages in R. We will use data from the Nature Cell Biology paper, EGF-mediated induction of Mcl-1 at the switch to lactation is essential for alveolar cell survival (<https://www.ncbi.nlm.nih.gov/pubmed/25730472>). This study examined the expression profiles of basal and luminal cells in the mammary gland of virgin, pregnant and lactating mice.
+The purpose of this tutorial is to demonstrate how to perform functional enrichment analysis/gene set testing using various tools/packages in R. We will use data from the Nature Cell Biology paper, [EGF-mediated induction of Mcl-1 at the switch to lactation is essential for alveolar cell survival](https://www.ncbi.nlm.nih.gov/pubmed/25730472). This study examined the expression profiles of basal and luminal cells in the mammary gland of virgin, pregnant and lactating mice.
 
 
 ## Load and read required libraries
