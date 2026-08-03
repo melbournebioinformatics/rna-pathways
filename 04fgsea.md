@@ -44,70 +44,6 @@ In this part of the workshop, we will:
 
 
 
-``` error
-Error in `library()`:
-! there is no package called 'edgeR'
-```
-
-``` error
-Error in `library()`:
-! there is no package called 'goseq'
-```
-
-``` error
-Error in `library()`:
-! there is no package called 'fgsea'
-```
-
-``` error
-Error in `library()`:
-! there is no package called 'EGSEA'
-```
-
-``` error
-Error in `library()`:
-! there is no package called 'clusterProfiler'
-```
-
-``` error
-Error in `library()`:
-! there is no package called 'org.Mm.eg.db'
-```
-
-``` error
-Error in `library()`:
-! there is no package called 'enrichplot'
-```
-
-``` error
-Error in `library()`:
-! there is no package called 'pathview'
-```
-
-``` error
-Error in `library()`:
-! there is no package called 'edgeR'
-```
-
-``` error
-Error in `library()`:
-! there is no package called 'impute'
-```
-
-``` error
-Error in `library()`:
-! there is no package called 'preprocessCore'
-```
-
-``` error
-Error in `library()`:
-! there is no package called 'RegEnrich'
-```
-
-``` error
-Error in `library()`:
-! there is no package called 'STRINGdb'
-```
 
 
 ## Gene Set Enrichment Analysis with `fgsea`
@@ -134,54 +70,21 @@ names(rankedgenes) <- rankedgenes_df$ENTREZID
 # stats     = ranked gene list (t-statistics)
 # minSize   = minimum number of genes required per pathway
 fgseaRes <- fgsea(pathways = Mm.H, stats = rankedgenes, minSize = 15)
-```
 
-``` error
-Error in `fgsea()`:
-! could not find function "fgsea"
-```
-
-``` r
 # Extract top enriched pathways
 # Up-regulated pathways (ES > 0), ordered by smallest p-value
 topPathwaysUp <- fgseaRes[ES > 0][head(order(pval), n=10), pathway]
-```
-
-``` error
-Error:
-! object 'fgseaRes' not found
-```
-
-``` r
 # Down-regulated pathways (ES < 0), ordered by smallest p-value
 topPathwaysDown <- fgseaRes[ES < 0][head(order(pval), n=10), pathway]
-```
-
-``` error
-Error:
-! object 'fgseaRes' not found
-```
-
-``` r
 # Combine: first up-regulated, then reversed down-regulated
 topPathways <- c(topPathwaysUp, rev(topPathwaysDown))
-```
 
-``` error
-Error:
-! object 'topPathwaysUp' not found
-```
-
-``` r
 # Plot a table of enrichment results
 plotGseaTable(Mm.H[topPathways], rankedgenes, fgseaRes, 
               gseaParam=0.5)
 ```
 
-``` error
-Error in `plotGseaTable()`:
-! could not find function "plotGseaTable"
-```
+<img src="fig/04fgsea-rendered-fgsea-analysis-1.png" alt="" style="display: block; margin: auto;" />
 
 ``` r
 # Plot the enrichment curve for the top pathway
@@ -189,10 +92,7 @@ Error in `plotGseaTable()`:
 plotEnrichment(Mm.H[[topPathwaysUp[1]]], rankedgenes) + labs(title = topPathwaysUp[1])
 ```
 
-``` error
-Error in `plotEnrichment()`:
-! could not find function "plotEnrichment"
-```
+<img src="fig/04fgsea-rendered-fgsea-analysis-2.png" alt="" style="display: block; margin: auto;" />
 
 :::::::::::::::::::::::::::::::::::: challenge
 ## Apply fgsea to the *deluminal* contrast 
