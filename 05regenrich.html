@@ -325,16 +325,16 @@
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="04fgsea.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Gene set enrichment
+          Previous: Gene set enrichment analysis with
         </a>
         <a class="chapter-link float-end" href="06stringdb.html" rel="next">
-          Next: Interaction networks...
+          Next: Interaction networks with <code>StringDB</code>...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Analysis with <code>RegEnrich</code></h1>
-        <p>Last updated on 2026-08-03 |
+        <p>Last updated on 2026-09-01 |
 
         <a href="https://melbournebioinformatics.github.io/rna-pathways/edit/main/episodes/05regenrich.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -403,11 +403,11 @@ score and rank.</li>
 </ul><p>Before we set up <code>RegEnrich</code> properly, we will explore the
 default TF list that comes with the package and see why it is not
 appropriate for this mouse dataset.</p>
-<div id="spot-the-problem-built-in-tfs-vs-mouse-data" class="callout discussion">
+<div id="spot-the-problem-built-in-tfs-vs-mouse-data" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<span class="callout-header">Discussion</span>
+<span class="callout-header">Challenge</span>
 <div id="spot-the-problem-built-in-tfs-vs-mouse-data" class="callout-inner">
 <h3 class="callout-title">Spot the problem: built-in TFs vs mouse
 data</h3>
@@ -530,7 +530,7 @@ directly using this link</a>.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Understanding design matrices and contrasts </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p><code>RegEnrich</code> uses a design matrix and contrast in a similar
 way to limma: they define which groups you want to compare.</p>
@@ -583,7 +583,7 @@ represent?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The number of groups equals the number of unique levels returned by
 <code>levels(factordata$CellTypeStatus)</code></p>
@@ -618,11 +618,11 @@ their expression patterns across conditions: - Are top-ranked regulators
 differentially expressed between groups? - Do their predicted targets
 show coordinated expression changes? - Does the expression of a
 regulator and its targets match your biological expectations?</p>
-<div id="interpreting-regulator-results" class="callout discussion">
+<div id="interpreting-regulator-results" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<span class="callout-header">Discussion</span>
+<span class="callout-header">Challenge</span>
 <div id="interpreting-regulator-results" class="callout-inner">
 <h3 class="callout-title">Interpreting regulator results</h3>
 <div class="callout-content">
@@ -668,10 +668,10 @@ any links that you are not going to use.
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="04fgsea.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Gene set enrichment
+          Previous: Gene set enrichment analysis with
         </a>
         <a class="chapter-link float-end" href="06stringdb.html" rel="next">
-          Next: Interaction networks...
+          Next: Interaction networks with <code>StringDB</code>...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -697,7 +697,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors.</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a> Custom fork by <a href="https://www.melbournebioinformatics.org.au/" class="external-link">Melbourne Bioinformatics</a>.</p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/" class="external-link">sandpaper (0.20.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/melbournebioinformatics/uom-varnish/tree/main" class="external-link">varnish (1.1.3)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/" class="external-link">sandpaper (0.21.0)</a>, <a href="https://github.com/carpentries/pegboard/tree/" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/melbournebioinformatics/uom-varnish/tree/main" class="external-link">varnish (1.1.3)</a></p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -719,8 +719,8 @@ any links that you are not going to use.
   "url": "melbournebioinformatics.github.io/uom-varnish/05regenrich.html",
   "identifier": "melbournebioinformatics.github.io/uom-varnish/05regenrich.html",
   "dateCreated": "2025-10-09",
-  "dateModified": "2026-08-03",
-  "datePublished": "2026-08-18"
+  "dateModified": "2026-09-01",
+  "datePublished": "2026-09-01"
 }
 
   </script><script>
